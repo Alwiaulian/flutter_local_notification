@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Notification Demo'),
+        title: const Text('Flutter Notif '),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -38,38 +38,39 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const Text(
-                    'This is a demo of how to use local notifications in Flutter.',
+                    'Tes Notif',
                     style: TextStyle(fontSize: 20),
                   ),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await service.showNotification(
-                          id: 0,
-                          title: 'Notification Title',
-                          body: 'Some body');
-                    },
-                    child: const Text('Show Local Notification'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await service.showScheduledNotification(
-                        id: 0,
-                        title: 'Notification Title',
-                        body: 'Some body',
-                        seconds: 4,
-                      );
-                    },
-                    child: const Text('Show Scheduled Notification'),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () async {
+                  //     await service.showNotification(
+                  //         id: 0,
+                  //         title: 'Notification Title',
+                  //         body: 'Some body');
+                  //   },
+                  //   child: const Text('Show Local Notification'),
+                  // ),
+                  // ElevatedButton(
+                  //   onPressed: () async {
+                  //     await service.showScheduledNotification(
+                  //       id: 0,
+                  //       title: 'Notification Title',
+                  //       body: 'Some body',
+                  //       seconds: 4,
+                  //     );
+                  //   },
+                  //   child: const Text('Show Scheduled Notification'),
+                  // ),
+
                   ElevatedButton(
                     onPressed: () async {
                       await service.showNotificationWithPayload(
                           id: 0,
-                          title: 'Notification Title',
-                          body: 'Some body',
-                          payload: 'payload navigation');
+                          title: 'Hallo gaes',
+                          body: 'Klik yukk',
+                          payload: 'this is detail notif');
                     },
-                    child: const Text('Show Notification With Payload'),
+                    child: const Text('Show Notification With Detail'),
                   ),
                 ],
               ),
